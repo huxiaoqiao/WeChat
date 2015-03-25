@@ -146,6 +146,10 @@
 		1825F3951AC252EE00416132 /* NSXMLElement+XEP_0335.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F33C1AC252EE00416132 /* NSXMLElement+XEP_0335.m */; };
 		1825F39C1AC2643E00416132 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1825F39B1AC2643E00416132 /* Login.storyboard */; };
 		1825F3A01AC2656200416132 /* WCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F39F1AC2656200416132 /* WCLoginViewController.m */; };
+		1825F3A71AC28FBD00416132 /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3A31AC28FBD00416132 /* MBProgressHUD+HM.m */; };
+		1825F3A81AC28FBD00416132 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1825F3A41AC28FBD00416132 /* MBProgressHUD.bundle */; };
+		1825F3A91AC28FBD00416132 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3A61AC28FBD00416132 /* MBProgressHUD.m */; };
+		1825F3AD1AC2926200416132 /* WCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3AC1AC2926200416132 /* WCAccount.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -443,6 +447,13 @@
 		1825F39B1AC2643E00416132 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1825F39E1AC2656200416132 /* WCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLoginViewController.h; sourceTree = "<group>"; };
 		1825F39F1AC2656200416132 /* WCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginViewController.m; sourceTree = "<group>"; };
+		1825F3A21AC28FBD00416132 /* MBProgressHUD+HM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HM.h"; sourceTree = "<group>"; };
+		1825F3A31AC28FBD00416132 /* MBProgressHUD+HM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HM.m"; sourceTree = "<group>"; };
+		1825F3A41AC28FBD00416132 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		1825F3A51AC28FBD00416132 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1825F3A61AC28FBD00416132 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1825F3AB1AC2926200416132 /* WCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAccount.h; sourceTree = "<group>"; };
+		1825F3AC1AC2926200416132 /* WCAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAccount.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -541,6 +552,7 @@
 		1825F1C41AC2514E00416132 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				1825F3A11AC28FBD00416132 /* MBProgessHUD */,
 				1825F1C51AC2514E00416132 /* XMPP */,
 			);
 			path = Lib;
@@ -1355,6 +1367,7 @@
 		1825F39A1AC2642F00416132 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1825F3AA1AC2924900416132 /* Model */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -1366,6 +1379,27 @@
 				1825F39F1AC2656200416132 /* WCLoginViewController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		1825F3A11AC28FBD00416132 /* MBProgessHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1825F3A21AC28FBD00416132 /* MBProgressHUD+HM.h */,
+				1825F3A31AC28FBD00416132 /* MBProgressHUD+HM.m */,
+				1825F3A41AC28FBD00416132 /* MBProgressHUD.bundle */,
+				1825F3A51AC28FBD00416132 /* MBProgressHUD.h */,
+				1825F3A61AC28FBD00416132 /* MBProgressHUD.m */,
+			);
+			path = MBProgessHUD;
+			sourceTree = "<group>";
+		};
+		1825F3AA1AC2924900416132 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1825F3AB1AC2926200416132 /* WCAccount.h */,
+				1825F3AC1AC2926200416132 /* WCAccount.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1455,6 +1489,7 @@
 				1825F1AE1AC2511700416132 /* LaunchScreen.xib in Resources */,
 				1825F1DF1AC251A000416132 /* README.txt in Resources */,
 				1825F1AB1AC2511700416132 /* Images.xcassets in Resources */,
+				1825F3A81AC28FBD00416132 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1507,6 +1542,7 @@
 				1825F3551AC252EE00416132 /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,
 				1825F3611AC252EE00416132 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				1825F24C1AC252A200416132 /* XMPPParser.m in Sources */,
+				1825F3A91AC28FBD00416132 /* MBProgressHUD.m in Sources */,
 				1825F3401AC252EE00416132 /* XMPPProcessOne.m in Sources */,
 				1825F1F11AC251D300416132 /* NSString+DDXML.m in Sources */,
 				1825F37F1AC252EE00416132 /* XMPPMessageArchiving.xcdatamodeld in Sources */,
@@ -1568,6 +1604,7 @@
 				1825F38E1AC252EE00416132 /* NSXMLElement+XEP_0203.m in Sources */,
 				1825F23E1AC252A200416132 /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				1825F3491AC252EE00416132 /* XMPPUserMemoryStorageObject.m in Sources */,
+				1825F3A71AC28FBD00416132 /* MBProgressHUD+HM.m in Sources */,
 				1825F2511AC252A200416132 /* RFImageToDataTransformer.m in Sources */,
 				1825F34E1AC252EE00416132 /* XMPPJabberRPCModule.m in Sources */,
 				1825F3701AC252EE00416132 /* XMPPPubSub.m in Sources */,
@@ -1599,6 +1636,7 @@
 				1825F24E1AC252A200416132 /* XMPPStream.m in Sources */,
 				1825F36A1AC252EE00416132 /* XMPPvCardTempLabel.m in Sources */,
 				1825F24A1AC252A200416132 /* XMPPMessage.m in Sources */,
+				1825F3AD1AC2926200416132 /* WCAccount.m in Sources */,
 				1825F3641AC252EE00416132 /* XMPPvCardTempCoreDataStorageObject.m in Sources */,
 				1825F3871AC252EE00416132 /* XMPPMessage+XEP_0184.m in Sources */,
 			);

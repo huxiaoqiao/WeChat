@@ -54,6 +54,13 @@
     
 //    [self setupStream];
 //    [self connectToHost];
+    // 判断用户是否登录
+    if([WCAccount shareAccount].isLogin){
+        //来主界面
+        id mainVc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+        self.window.rootViewController = mainVc;
+    }
+    
     return YES;
 }
 
@@ -74,7 +81,7 @@
     }
     // 1.设置登录用户的jid
     // resource 用户登录客户端设备登录的类型
-    NSString *user = [[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
+    NSString *user = [WCAccount shareAccount].user;
     XMPPJID *myJid = [XMPPJID jidWithUser:user domain:@"teacher.local" resource:@"iphone"];
     _xmppStream.myJID = myJid;
     
@@ -99,7 +106,7 @@
 
 -(void)sendPwdToHost{
     NSError *error = nil;
-    NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"pwd"];
+    NSString *pwd = [WCAccount shareAccount].pwd;
     [_xmppStream authenticateWithPassword:pwd error:&error];
     if (error) {
         NSLog(@"%@",error);
@@ -129,6 +136,8 @@
     //回调resultBlock
     if (_resultBlock) {
         _resultBlock(XMPPResultTypeLoginSucess);
+        
+        _resultBlock = nil;
     }
 }
 
@@ -144,6 +153,8 @@
 #pragma mark -公共方法
 #pragma mark 用户登录
 -(void)xmppLogin:(XMPPResultBlock)resultBlock{
+    // 不管什么情况，把以前的连接断开
+    [_xmppStream disconnect];
     
     // 保存resultBlock
     _resultBlock = resultBlock;

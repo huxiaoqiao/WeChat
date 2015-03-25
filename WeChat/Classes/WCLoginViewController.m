@@ -8,6 +8,7 @@
 
 #import "WCLoginViewController.h"
 #import "AppDelegate.h"
+#import "MBProgressHUD+HM.h"
 
 @interface WCLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *userField;
@@ -32,12 +33,21 @@
         return;
     }
     
+    
+    // 给用户提示
+    [MBProgressHUD showMessage:@"正在登录ing...."];
+    
     // 2.登录服务器
-    // 2.1把用户名和密码保存到沙盒
-    NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
-    [defaults setObject:self.userField.text forKey:@"user"];
-    [defaults setObject:self.pwdField.text forKey:@"pwd"];
-    [defaults synchronize];
+//    // 2.1把用户名和密码保存到沙盒
+//    NSUserDefaults *defaults= [NSUserDefaults standardUserDefaults];
+//    [defaults setObject:self.userField.text forKey:@"user"];
+//    [defaults setObject:self.pwdField.text forKey:@"pwd"];
+//    [defaults synchronize];
+   // 2.1把用户和密码先放在Account单例
+    [WCAccount shareAccount].user = self.userField.text;
+    [WCAccount shareAccount].pwd = self.pwdField.text;
+    
+    
     
     // 2.2调用AppDelegate的xmppLogin方法
     
@@ -45,32 +55,57 @@
     // 》代理
     // 》block
     // 》通知
+    
+    // block会对self进行强引用
+    __weak typeof(self) selfVc = self;
+    //自己写的block ，有强引用的时候，使用弱引用,系统block,我基本可次理
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
     [appDelegate xmppLogin:^(XMPPResultType resultType) {
         
+        [selfVc handlXMPPResultType:resultType];
+        
+    }];
+
+}
+
+
+#pragma mark 处理结果
+-(void)handlXMPPResultType:(XMPPResultType)resultType{
+    //回到主线程更新UI
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD hideHUD];
         if (resultType == XMPPResultTypeLoginSucess) {
             NSLog(@"%s 登录成功",__func__);
             // 3.登录成功切换到主界面
             [self changeToMain];
+            
+            // 设置当前的登录状态
+            [WCAccount shareAccount].login = YES;
+            
+            // 保存登录帐户信息到沙盒
+            [[WCAccount shareAccount] saveToSandBox];
+            
         }else{
             NSLog(@"%s 登录失败",__func__);
+            [MBProgressHUD showError:@"用户名或者密码不正确"];
         }
-    }];
-    
-    
-    }
-
-
--(void)changeToMain{
-    //回到主线程更新UI
-    dispatch_async(dispatch_get_main_queue(), ^{
-        // 1.获取Main.storyboard的第一个控制器
-        id vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
-        
-        // 2.切换window的根控制器
-        [UIApplication sharedApplication].keyWindow.rootViewController = vc;
     });
-    
+
     
 }
+
+-(void)dealloc{
+    NSLog(@"%s",__func__);
+}
+
+
+#pragma mark 切换到主界面
+-(void)changeToMain{
+    // 1.获取Main.storyboard的第一个控制器
+    id vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+    
+    // 2.切换window的根控制器
+    [UIApplication sharedApplication].keyWindow.rootViewController = vc;
+    
+    }
 @end
