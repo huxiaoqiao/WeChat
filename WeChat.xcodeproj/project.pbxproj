@@ -160,8 +160,8 @@
 		1825F19A1AC2511700416132 /* WeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1825F19E1AC2511700416132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1825F19F1AC2511700416132 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1825F1A11AC2511700416132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1825F1A21AC2511700416132 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1825F1A11AC2511700416132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		1825F1A21AC2511700416132 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		1825F1A41AC2511700416132 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1825F1A51AC2511700416132 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1825F1A81AC2511700416132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -485,8 +485,6 @@
 			isa = PBXGroup;
 			children = (
 				1825F1C31AC2514E00416132 /* Classes */,
-				1825F1A11AC2511700416132 /* AppDelegate.h */,
-				1825F1A21AC2511700416132 /* AppDelegate.m */,
 				1825F1A41AC2511700416132 /* ViewController.h */,
 				1825F1A51AC2511700416132 /* ViewController.m */,
 				1825F1A71AC2511700416132 /* Main.storyboard */,
@@ -527,6 +525,7 @@
 		1825F1C31AC2514E00416132 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1825F3981AC254D500416132 /* Other */,
 				1825F1C41AC2514E00416132 /* Lib */,
 			);
 			path = Classes;
@@ -1326,6 +1325,15 @@
 				1825F33C1AC252EE00416132 /* NSXMLElement+XEP_0335.m */,
 			);
 			path = "XEP-0335";
+			sourceTree = "<group>";
+		};
+		1825F3981AC254D500416132 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1825F1A11AC2511700416132 /* AppDelegate.h */,
+				1825F1A21AC2511700416132 /* AppDelegate.m */,
+			);
+			name = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

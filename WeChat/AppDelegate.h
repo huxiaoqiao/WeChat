@@ -12,6 +12,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+/**
+ *  XMPP用户登录
+ */
+-(void)xmppLogin;
 @end
 
