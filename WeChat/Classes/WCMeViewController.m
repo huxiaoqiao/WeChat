@@ -100,10 +100,13 @@
 - (IBAction)logoutBtnClick:(id)sender {
     
     //注销
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate xmppLogout];
-    //回登录的控制器
+    [[WCXMPPTool sharedWCXMPPTool] xmppLogout];
     
+    // 注销的时候，把沙盒的登录状态设置为NO
+    [WCAccount shareAccount].login = NO;
+    [[WCAccount shareAccount] saveToSandBox];
+    
+    //回登录的控制器
     [UIStoryboard showInitialVCWithName:@"Login"];
 
 }

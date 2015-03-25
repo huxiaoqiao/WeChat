@@ -27,7 +27,7 @@
     // 三个线程同时调用这个方法
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        if (acount == nil) {
+//        if (acount == nil) {
             acount = [super allocWithZone:zone];
             
             //从沙盒获取上次的用户登录信息
@@ -35,7 +35,7 @@
             acount.user = [defaults objectForKey:kUserKey];
             acount.pwd = [defaults objectForKey:kPwdKey];
             acount.login = [defaults boolForKey:kLoginKey];
-        }
+//        }
     });
     
     return acount;

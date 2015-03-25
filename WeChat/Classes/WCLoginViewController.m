@@ -59,8 +59,8 @@
     // block会对self进行强引用
     __weak typeof(self) selfVc = self;
     //自己写的block ，有强引用的时候，使用弱引用,系统block,我基本可次理
-    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate xmppLogin:^(XMPPResultType resultType) {
+    
+    [[WCXMPPTool sharedWCXMPPTool] xmppLogin:^(XMPPResultType resultType) {
         
         [selfVc handlXMPPResultType:resultType];
         
