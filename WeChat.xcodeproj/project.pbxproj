@@ -158,6 +158,7 @@
 		1825F3C51AC2A38B00416132 /* UITextField+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3BE1AC2A38B00416132 /* UITextField+WF.m */; };
 		1825F3C61AC2A38B00416132 /* UIView+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3C01AC2A38B00416132 /* UIView+WF.m */; };
 		1825F3CA1AC2A60600416132 /* WCXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3C91AC2A60600416132 /* WCXMPPTool.m */; };
+		1825F3CE1AC2ADA000416132 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -480,6 +481,8 @@
 		1825F3C81AC2A60600416132 /* WCXMPPTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCXMPPTool.h; sourceTree = "<group>"; };
 		1825F3C91AC2A60600416132 /* WCXMPPTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCXMPPTool.m; sourceTree = "<group>"; };
 		1825F3CB1AC2A65600416132 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		1825F3CC1AC2ADA000416132 /* WCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCRegisterViewController.h; sourceTree = "<group>"; };
+		1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1406,6 +1409,8 @@
 			children = (
 				1825F39E1AC2656200416132 /* WCLoginViewController.h */,
 				1825F39F1AC2656200416132 /* WCLoginViewController.m */,
+				1825F3CC1AC2ADA000416132 /* WCRegisterViewController.h */,
+				1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1710,6 +1715,7 @@
 				1825F1A01AC2511700416132 /* main.m in Sources */,
 				1825F36C1AC252EE00416132 /* XMPPvCardTempTel.m in Sources */,
 				1825F3501AC252EE00416132 /* XMPPLastActivity.m in Sources */,
+				1825F3CE1AC2ADA000416132 /* WCRegisterViewController.m in Sources */,
 				1825F1D91AC251A000416132 /* DDASLLogger.m in Sources */,
 				1825F24F1AC252A200416132 /* DDList.m in Sources */,
 				1825F3621AC252EE00416132 /* XMPPvCardCoreDataStorage.m in Sources */,

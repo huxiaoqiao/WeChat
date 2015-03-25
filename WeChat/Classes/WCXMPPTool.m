@@ -78,9 +78,23 @@ singleton_implementation(WCXMPPTool)
         [self setupStream];
     }
     // 1.设置登录用户的jid
+    XMPPJID *myJid = nil;
     // resource 用户登录客户端设备登录的类型
-    NSString *user = [WCAccount shareAccount].user;
-    XMPPJID *myJid = [XMPPJID jidWithUser:user domain:@"teacher.local" resource:@"iphone"];
+    
+    /*
+    if(注册请求){
+        //设置注册的JID
+    }else{
+        //设置登录JID
+    }*/
+    if (self.isRegisterOperation) {//注册
+        NSString *registerUser = [WCAccount shareAccount].registerUser;
+        myJid = [XMPPJID jidWithUser:registerUser domain:@"teacher.local" resource:nil];
+    }else{//登录操作
+        NSString *loginUser = [WCAccount shareAccount].loginUser;
+        myJid = [XMPPJID jidWithUser:loginUser domain:@"teacher.local" resource:nil];
+    }
+    
     _xmppStream.myJID = myJid;
     
     // 2.设置主机地址
@@ -104,7 +118,7 @@ singleton_implementation(WCXMPPTool)
 
 -(void)sendPwdToHost{
     NSError *error = nil;
-    NSString *pwd = [WCAccount shareAccount].pwd;
+    NSString *pwd = [WCAccount shareAccount].loginPwd;
     [_xmppStream authenticateWithPassword:pwd error:&error];
     if (error) {
         NSLog(@"%@",error);
@@ -132,7 +146,17 @@ singleton_implementation(WCXMPPTool)
 #pragma mark 连接建立成功
 -(void)xmppStreamDidConnect:(XMPPStream *)sender{
     NSLog(@"%s",__func__);
-    [self sendPwdToHost];
+    if (self.isRegisterOperation) {//注册
+        NSError *error = nil;
+        NSString *reigsterPwd = [WCAccount shareAccount].registerPwd;
+        [_xmppStream registerWithPassword:reigsterPwd error:&error];
+        if (error) {
+            NSLog(@"%@",error);
+        }
+    }else{//登录
+        [self sendPwdToHost];
+    }
+    
 }
 
 #pragma mark 与服务器断开连接
@@ -162,6 +186,23 @@ singleton_implementation(WCXMPPTool)
     }
 }
 
+#pragma mark 注册成功
+-(void)xmppStreamDidRegister:(XMPPStream *)sender{
+    NSLog(@"%s",__func__);
+    if (_resultBlock) {
+        _resultBlock(XMPPResultTypeRegisterSucess);
+    }
+}
+
+#pragma mark 注册失败
+-(void)xmppStream:(XMPPStream *)sender didNotRegister:(DDXMLElement *)error{
+    NSLog(@"%s %@",__func__,error);
+    if (_resultBlock) {
+        _resultBlock(XMPPResultTypeRegisterFailure);
+    }
+    
+}
+
 #pragma mark -公共方法
 #pragma mark 用户登录
 -(void)xmppLogin:(XMPPResultBlock)resultBlock{
@@ -175,6 +216,24 @@ singleton_implementation(WCXMPPTool)
     // 连接服务器开始登录的操作
     [self connectToHost];
     
+}
+
+
+#pragma mark 用户注册
+-(void)xmppRegister:(XMPPResultBlock)resultBlock{
+    /* 注册步骤
+     1.发送 "注册jid" 给服务器，请求一个长连接
+     2.连接成功，发送注册密码
+    */
+    //保存block
+    _resultBlock = resultBlock;
+    
+    // 去除以前的连接
+    [_xmppStream disconnect];
+   
+    [self connectToHost];
+    
+
 }
 
 #pragma mark 用户注销

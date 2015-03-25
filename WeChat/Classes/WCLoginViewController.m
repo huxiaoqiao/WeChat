@@ -44,8 +44,8 @@
 //    [defaults setObject:self.pwdField.text forKey:@"pwd"];
 //    [defaults synchronize];
    // 2.1把用户和密码先放在Account单例
-    [WCAccount shareAccount].user = self.userField.text;
-    [WCAccount shareAccount].pwd = self.pwdField.text;
+    [WCAccount shareAccount].loginUser = self.userField.text;
+    [WCAccount shareAccount].loginPwd = self.pwdField.text;
     
     
     
@@ -59,6 +59,9 @@
     // block会对self进行强引用
     __weak typeof(self) selfVc = self;
     //自己写的block ，有强引用的时候，使用弱引用,系统block,我基本可次理
+    
+    //设置标识
+    [WCXMPPTool sharedWCXMPPTool].registerOperation = NO;
     
     [[WCXMPPTool sharedWCXMPPTool] xmppLogin:^(XMPPResultType resultType) {
         
