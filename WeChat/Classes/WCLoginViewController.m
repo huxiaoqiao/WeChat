@@ -77,8 +77,7 @@
         if (resultType == XMPPResultTypeLoginSucess) {
             NSLog(@"%s 登录成功",__func__);
             // 3.登录成功切换到主界面
-            [self changeToMain];
-            
+            [UIStoryboard showInitialVCWithName:@"Main"];
             // 设置当前的登录状态
             [WCAccount shareAccount].login = YES;
             
@@ -99,13 +98,13 @@
 }
 
 
-#pragma mark 切换到主界面
--(void)changeToMain{
-    // 1.获取Main.storyboard的第一个控制器
-    id vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
-    
-    // 2.切换window的根控制器
-    [UIApplication sharedApplication].keyWindow.rootViewController = vc;
-    
-    }
+//#pragma mark 切换到主界面
+//-(void)changeToMain{
+//    // 1.获取Main.storyboard的第一个控制器
+//    id vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateInitialViewController];
+//    
+//    // 2.切换window的根控制器
+//    [UIApplication sharedApplication].keyWindow.rootViewController = vc;
+//    
+//    }
 @end

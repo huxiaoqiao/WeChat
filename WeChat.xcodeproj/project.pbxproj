@@ -150,6 +150,13 @@
 		1825F3A81AC28FBD00416132 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1825F3A41AC28FBD00416132 /* MBProgressHUD.bundle */; };
 		1825F3A91AC28FBD00416132 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3A61AC28FBD00416132 /* MBProgressHUD.m */; };
 		1825F3AD1AC2926200416132 /* WCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3AC1AC2926200416132 /* WCAccount.m */; };
+		1825F3B21AC29E9100416132 /* WCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3B11AC29E9100416132 /* WCMeViewController.m */; };
+		1825F3C11AC2A38B00416132 /* UIButton+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3B61AC2A38B00416132 /* UIButton+WF.m */; };
+		1825F3C21AC2A38B00416132 /* UIImage+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3B81AC2A38B00416132 /* UIImage+WF.m */; };
+		1825F3C31AC2A38B00416132 /* UIScreen+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3BA1AC2A38B00416132 /* UIScreen+WF.m */; };
+		1825F3C41AC2A38B00416132 /* UIStoryboard+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3BC1AC2A38B00416132 /* UIStoryboard+WF.m */; };
+		1825F3C51AC2A38B00416132 /* UITextField+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3BE1AC2A38B00416132 /* UITextField+WF.m */; };
+		1825F3C61AC2A38B00416132 /* UIView+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3C01AC2A38B00416132 /* UIView+WF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -454,6 +461,21 @@
 		1825F3A61AC28FBD00416132 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		1825F3AB1AC2926200416132 /* WCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAccount.h; sourceTree = "<group>"; };
 		1825F3AC1AC2926200416132 /* WCAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAccount.m; sourceTree = "<group>"; };
+		1825F3B01AC29E9100416132 /* WCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCMeViewController.h; sourceTree = "<group>"; };
+		1825F3B11AC29E9100416132 /* WCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCMeViewController.m; sourceTree = "<group>"; };
+		1825F3B41AC2A38B00416132 /* CategoryWF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryWF.h; sourceTree = "<group>"; };
+		1825F3B51AC2A38B00416132 /* UIButton+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WF.h"; sourceTree = "<group>"; };
+		1825F3B61AC2A38B00416132 /* UIButton+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WF.m"; sourceTree = "<group>"; };
+		1825F3B71AC2A38B00416132 /* UIImage+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WF.h"; sourceTree = "<group>"; };
+		1825F3B81AC2A38B00416132 /* UIImage+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WF.m"; sourceTree = "<group>"; };
+		1825F3B91AC2A38B00416132 /* UIScreen+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+WF.h"; sourceTree = "<group>"; };
+		1825F3BA1AC2A38B00416132 /* UIScreen+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+WF.m"; sourceTree = "<group>"; };
+		1825F3BB1AC2A38B00416132 /* UIStoryboard+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+WF.h"; sourceTree = "<group>"; };
+		1825F3BC1AC2A38B00416132 /* UIStoryboard+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+WF.m"; sourceTree = "<group>"; };
+		1825F3BD1AC2A38B00416132 /* UITextField+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+WF.h"; sourceTree = "<group>"; };
+		1825F3BE1AC2A38B00416132 /* UITextField+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+WF.m"; sourceTree = "<group>"; };
+		1825F3BF1AC2A38B00416132 /* UIView+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WF.h"; sourceTree = "<group>"; };
+		1825F3C01AC2A38B00416132 /* UIView+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,7 +525,6 @@
 				1825F1C31AC2514E00416132 /* Classes */,
 				1825F1A41AC2511700416132 /* ViewController.h */,
 				1825F1A51AC2511700416132 /* ViewController.m */,
-				1825F1A71AC2511700416132 /* Main.storyboard */,
 				1825F1AA1AC2511700416132 /* Images.xcassets */,
 				1825F1AC1AC2511700416132 /* LaunchScreen.xib */,
 				1825F19D1AC2511700416132 /* Supporting Files */,
@@ -541,6 +562,7 @@
 		1825F1C31AC2514E00416132 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1825F3AE1AC29E4700416132 /* Profile[我] */,
 				1825F39A1AC2642F00416132 /* Main */,
 				1825F3991AC2642900416132 /* Login */,
 				1825F3981AC254D500416132 /* Other */,
@@ -552,6 +574,7 @@
 		1825F1C41AC2514E00416132 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				1825F3B31AC2A38B00416132 /* Category */,
 				1825F3A11AC28FBD00416132 /* MBProgessHUD */,
 				1825F1C51AC2514E00416132 /* XMPP */,
 			);
@@ -1367,6 +1390,7 @@
 		1825F39A1AC2642F00416132 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1825F1A71AC2511700416132 /* Main.storyboard */,
 				1825F3AA1AC2924900416132 /* Model */,
 			);
 			name = Main;
@@ -1400,6 +1424,43 @@
 				1825F3AC1AC2926200416132 /* WCAccount.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1825F3AE1AC29E4700416132 /* Profile[我] */ = {
+			isa = PBXGroup;
+			children = (
+				1825F3AF1AC29E5700416132 /* Controller */,
+			);
+			name = "Profile[我]";
+			sourceTree = "<group>";
+		};
+		1825F3AF1AC29E5700416132 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1825F3B01AC29E9100416132 /* WCMeViewController.h */,
+				1825F3B11AC29E9100416132 /* WCMeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1825F3B31AC2A38B00416132 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1825F3B41AC2A38B00416132 /* CategoryWF.h */,
+				1825F3B51AC2A38B00416132 /* UIButton+WF.h */,
+				1825F3B61AC2A38B00416132 /* UIButton+WF.m */,
+				1825F3B71AC2A38B00416132 /* UIImage+WF.h */,
+				1825F3B81AC2A38B00416132 /* UIImage+WF.m */,
+				1825F3B91AC2A38B00416132 /* UIScreen+WF.h */,
+				1825F3BA1AC2A38B00416132 /* UIScreen+WF.m */,
+				1825F3BB1AC2A38B00416132 /* UIStoryboard+WF.h */,
+				1825F3BC1AC2A38B00416132 /* UIStoryboard+WF.m */,
+				1825F3BD1AC2A38B00416132 /* UITextField+WF.h */,
+				1825F3BE1AC2A38B00416132 /* UITextField+WF.m */,
+				1825F3BF1AC2A38B00416132 /* UIView+WF.h */,
+				1825F3C01AC2A38B00416132 /* UIView+WF.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1512,18 +1573,22 @@
 				1825F3671AC252EE00416132 /* XMPPvCardTempAdrTypes.m in Sources */,
 				1825F3571AC252EE00416132 /* XMPPRoomHybridStorage.m in Sources */,
 				1825F23F1AC252A200416132 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
+				1825F3C41AC2A38B00416132 /* UIStoryboard+WF.m in Sources */,
 				1825F35D1AC252EE00416132 /* XMPPMessage+XEP0045.m in Sources */,
 				1825F35E1AC252EE00416132 /* XMPPMUC.m in Sources */,
 				1825F3651AC252EE00416132 /* XMPPvCardTemp.m in Sources */,
 				1825F3A01AC2656200416132 /* WCLoginViewController.m in Sources */,
 				1825F3661AC252EE00416132 /* XMPPvCardTempAdr.m in Sources */,
 				1825F3721AC252EE00416132 /* XMPPIQ+XEP_0066.m in Sources */,
+				1825F3B21AC29E9100416132 /* WCMeViewController.m in Sources */,
 				1825F1DB1AC251A000416132 /* DDLog.m in Sources */,
 				1825F3681AC252EE00416132 /* XMPPvCardTempBase.m in Sources */,
 				1825F3511AC252EE00416132 /* XMPPPrivacy.m in Sources */,
 				1825F24D1AC252A200416132 /* XMPPPresence.m in Sources */,
+				1825F3C61AC2A38B00416132 /* UIView+WF.m in Sources */,
 				1825F1F21AC251D300416132 /* DDXMLDocument.m in Sources */,
 				1825F2431AC252A200416132 /* XMPPXOAuth2Google.m in Sources */,
+				1825F3C21AC2A38B00416132 /* UIImage+WF.m in Sources */,
 				1825F3421AC252EE00416132 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				1825F33E1AC252EE00416132 /* XMPPCoreDataStorage.m in Sources */,
 				1825F3471AC252EE00416132 /* XMPPResourceMemoryStorageObject.m in Sources */,
@@ -1538,6 +1603,7 @@
 				1825F34C1AC252EE00416132 /* XMPPIQ+JabberRPC.m in Sources */,
 				1825F37E1AC252EE00416132 /* XMPPCapabilities.m in Sources */,
 				1825F3541AC252EE00416132 /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
+				1825F3C51AC2A38B00416132 /* UITextField+WF.m in Sources */,
 				1825F3521AC252EE00416132 /* XMPPRoom.xcdatamodeld in Sources */,
 				1825F3551AC252EE00416132 /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,
 				1825F3611AC252EE00416132 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
@@ -1559,7 +1625,9 @@
 				1825F36D1AC252EE00416132 /* NSXMLElement+XEP_0059.m in Sources */,
 				1825F35C1AC252EE00416132 /* XMPPRoomOccupantMemoryStorageObject.m in Sources */,
 				1825F2421AC252A200416132 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
+				1825F3C31AC2A38B00416132 /* UIScreen+WF.m in Sources */,
 				1825F3481AC252EE00416132 /* XMPPRosterMemoryStorage.m in Sources */,
+				1825F3C11AC2A38B00416132 /* UIButton+WF.m in Sources */,
 				1825F35F1AC252EE00416132 /* XMPPRoom.m in Sources */,
 				1825F34D1AC252EE00416132 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				1825F3831AC252EE00416132 /* XMPPMessageArchiving.m in Sources */,
@@ -1667,6 +1735,7 @@
 				1825F1A81AC2511700416132 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1825F1AC1AC2511700416132 /* LaunchScreen.xib */ = {

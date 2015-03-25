@@ -26,5 +26,7 @@ typedef void (^XMPPResultBlock)(XMPPResultType);
  *  XMPP用户登录
  */
 -(void)xmppLogin:(XMPPResultBlock)resultBlock;
+
+-(void)xmppLogout;
 @end
 
