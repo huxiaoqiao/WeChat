@@ -144,6 +144,8 @@
 		1825F3931AC252EE00416132 /* XMPPMessage+XEP_0308.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3361AC252EE00416132 /* XMPPMessage+XEP_0308.m */; };
 		1825F3941AC252EE00416132 /* XMPPMessage+XEP_0333.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3391AC252EE00416132 /* XMPPMessage+XEP_0333.m */; };
 		1825F3951AC252EE00416132 /* NSXMLElement+XEP_0335.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F33C1AC252EE00416132 /* NSXMLElement+XEP_0335.m */; };
+		1825F39C1AC2643E00416132 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1825F39B1AC2643E00416132 /* Login.storyboard */; };
+		1825F3A01AC2656200416132 /* WCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F39F1AC2656200416132 /* WCLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -438,6 +440,9 @@
 		1825F33C1AC252EE00416132 /* NSXMLElement+XEP_0335.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSXMLElement+XEP_0335.m"; sourceTree = "<group>"; };
 		1825F3961AC2530F00416132 /* XMPPFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPFramework.h; sourceTree = "<group>"; };
 		1825F3971AC2536D00416132 /* WeChat-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WeChat-Prefix.pch"; sourceTree = "<group>"; };
+		1825F39B1AC2643E00416132 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		1825F39E1AC2656200416132 /* WCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCLoginViewController.h; sourceTree = "<group>"; };
+		1825F39F1AC2656200416132 /* WCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +530,8 @@
 		1825F1C31AC2514E00416132 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1825F39A1AC2642F00416132 /* Main */,
+				1825F3991AC2642900416132 /* Login */,
 				1825F3981AC254D500416132 /* Other */,
 				1825F1C41AC2514E00416132 /* Lib */,
 			);
@@ -1336,6 +1343,31 @@
 			name = Other;
 			sourceTree = "<group>";
 		};
+		1825F3991AC2642900416132 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1825F39D1AC2654700416132 /* Controller */,
+				1825F39B1AC2643E00416132 /* Login.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		1825F39A1AC2642F00416132 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		1825F39D1AC2654700416132 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1825F39E1AC2656200416132 /* WCLoginViewController.h */,
+				1825F39F1AC2656200416132 /* WCLoginViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1380,6 +1412,7 @@
 		1825F1921AC2511700416132 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WC;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = apple;
 				TargetAttributes = {
@@ -1418,6 +1451,7 @@
 			files = (
 				1825F1FC1AC2525E00416132 /* build-libidn.sh in Resources */,
 				1825F1A91AC2511700416132 /* Main.storyboard in Resources */,
+				1825F39C1AC2643E00416132 /* Login.storyboard in Resources */,
 				1825F1AE1AC2511700416132 /* LaunchScreen.xib in Resources */,
 				1825F1DF1AC251A000416132 /* README.txt in Resources */,
 				1825F1AB1AC2511700416132 /* Images.xcassets in Resources */,
@@ -1446,6 +1480,7 @@
 				1825F35D1AC252EE00416132 /* XMPPMessage+XEP0045.m in Sources */,
 				1825F35E1AC252EE00416132 /* XMPPMUC.m in Sources */,
 				1825F3651AC252EE00416132 /* XMPPvCardTemp.m in Sources */,
+				1825F3A01AC2656200416132 /* WCLoginViewController.m in Sources */,
 				1825F3661AC252EE00416132 /* XMPPvCardTempAdr.m in Sources */,
 				1825F3721AC252EE00416132 /* XMPPIQ+XEP_0066.m in Sources */,
 				1825F1DB1AC251A000416132 /* DDLog.m in Sources */,
@@ -1695,6 +1730,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = WeChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1702,6 +1738,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1717,6 +1754,7 @@
 					/usr/include/libxml2,
 				);
 				INFOPLIST_FILE = WeChat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1724,6 +1762,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

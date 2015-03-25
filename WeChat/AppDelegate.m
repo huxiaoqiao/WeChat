@@ -22,6 +22,8 @@
 @interface AppDelegate ()<XMPPStreamDelegate>{
     
     XMPPStream *_xmppStream;//与服务器交互的核心类
+    
+    XMPPResultBlock _resultBlock;//结果回调Block
 }
 /**
  *  1.初始化XMPPStream
@@ -50,8 +52,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self setupStream];
-    [self connectToHost];
+//    [self setupStream];
+//    [self connectToHost];
     return YES;
 }
 
@@ -60,15 +62,20 @@
     // 创建XMPPStream对象
     _xmppStream = [[XMPPStream alloc] init];
     
-    // 设置代理
+    // 设置代理 -
+//#warnning 所有的代理方法都将在子线程被调用
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
 }
 
 -(void)connectToHost{
 
+    if (!_xmppStream) {
+        [self setupStream];
+    }
     // 1.设置登录用户的jid
     // resource 用户登录客户端设备登录的类型
-    XMPPJID *myJid = [XMPPJID jidWithUser:@"wangwu" domain:@"teacher.local" resource:@"iphone"];
+    NSString *user = [[NSUserDefaults standardUserDefaults] objectForKey:@"user"];
+    XMPPJID *myJid = [XMPPJID jidWithUser:user domain:@"teacher.local" resource:@"iphone"];
     _xmppStream.myJID = myJid;
     
     // 2.设置主机地址
@@ -92,7 +99,8 @@
 
 -(void)sendPwdToHost{
     NSError *error = nil;
-    [_xmppStream authenticateWithPassword:@"123456" error:&error];
+    NSString *pwd = [[NSUserDefaults standardUserDefaults] objectForKey:@"pwd"];
+    [_xmppStream authenticateWithPassword:pwd error:&error];
     if (error) {
         NSLog(@"%@",error);
     }
@@ -117,16 +125,32 @@
 -(void)xmppStreamDidAuthenticate:(XMPPStream *)sender{
     NSLog(@"%s",__func__);
     [self sendOnline];
+    
+    //回调resultBlock
+    if (_resultBlock) {
+        _resultBlock(XMPPResultTypeLoginSucess);
+    }
 }
 
 #pragma mark 登录失败
 -(void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error{
     NSLog(@"%s %@",__func__,error);
+    //回调resultBlock
+    if (_resultBlock) {
+        _resultBlock(XMPPResultTypeLoginFailure);
+    }
 }
 
 #pragma mark -公共方法
 #pragma mark 用户登录
--(void)xmppLogin{
+-(void)xmppLogin:(XMPPResultBlock)resultBlock{
+    
+    // 保存resultBlock
+    _resultBlock = resultBlock;
+    
+    
+    // 连接服务器开始登录的操作
+    [self connectToHost];
  
 }
 
