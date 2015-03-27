@@ -53,19 +53,33 @@
             </objects>
             <point key="canvasLocation" x="849" y="-423"/>
         </scene>
-        <!--Root View Controller-->
+        <!--通讯录-->
         <scene sceneID="mc2-NH-5IZ">
             <objects>
-                <tableViewController id="Q9j-gb-Hwx" sceneMemberID="viewController">
+                <tableViewController id="Q9j-gb-Hwx" customClass="WCContactViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lXC-9z-ptu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2Yi-qH-I6K">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" textLabel="XCd-K0-kQU" detailTextLabel="5LK-kc-0yw" style="IBUITableViewCellStyleValue1" id="2Yi-qH-I6K">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Yi-qH-I6K" id="z1Q-G6-oD1">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XCd-K0-kQU">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5LK-kc-0yw">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -74,7 +88,7 @@
                             <outlet property="delegate" destination="Q9j-gb-Hwx" id="fVj-Kq-n0b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="iA4-W4-NXO"/>
+                    <navigationItem key="navigationItem" title="通讯录" id="iA4-W4-NXO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ieD-hw-m5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -459,11 +473,11 @@
             </objects>
             <point key="canvasLocation" x="-189" y="967"/>
         </scene>
-        <!--Item-->
+        <!--通讯录-->
         <scene sceneID="8GZ-vW-wgQ">
             <objects>
                 <navigationController id="uMw-3z-Kxo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ioU-Sl-Oyl"/>
+                    <tabBarItem key="tabBarItem" title="通讯录" id="ioU-Sl-Oyl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQb-JL-9Wl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

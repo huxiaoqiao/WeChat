@@ -161,6 +161,7 @@
 		1825F3CE1AC2ADA000416132 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */; };
 		1879A4751AC508F300E03F79 /* WCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4741AC508F300E03F79 /* WCProfileViewController.m */; };
 		1879A4781AC5355200E03F79 /* WCEditVCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4771AC5355200E03F79 /* WCEditVCardViewController.m */; };
+		1879A47D1AC54FB300E03F79 /* WCContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A47C1AC54FB300E03F79 /* WCContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -489,6 +490,8 @@
 		1879A4741AC508F300E03F79 /* WCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileViewController.m; sourceTree = "<group>"; };
 		1879A4761AC5355200E03F79 /* WCEditVCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEditVCardViewController.h; sourceTree = "<group>"; };
 		1879A4771AC5355200E03F79 /* WCEditVCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEditVCardViewController.m; sourceTree = "<group>"; };
+		1879A47B1AC54FB300E03F79 /* WCContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCContactViewController.h; sourceTree = "<group>"; };
+		1879A47C1AC54FB300E03F79 /* WCContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -575,6 +578,7 @@
 		1825F1C31AC2514E00416132 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1879A4791AC54F8E00E03F79 /* Contacts[通讯录] */,
 				1825F3AE1AC29E4700416132 /* Profile[我] */,
 				1825F39A1AC2642F00416132 /* Main */,
 				1825F3991AC2642900416132 /* Login */,
@@ -1495,6 +1499,23 @@
 			name = Tool;
 			sourceTree = "<group>";
 		};
+		1879A4791AC54F8E00E03F79 /* Contacts[通讯录] */ = {
+			isa = PBXGroup;
+			children = (
+				1879A47A1AC54FA300E03F79 /* Controller */,
+			);
+			name = "Contacts[通讯录]";
+			sourceTree = "<group>";
+		};
+		1879A47A1AC54FA300E03F79 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1879A47B1AC54FB300E03F79 /* WCContactViewController.h */,
+				1879A47C1AC54FB300E03F79 /* WCContactViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1625,6 +1646,7 @@
 				1825F3421AC252EE00416132 /* XMPPGroupCoreDataStorageObject.m in Sources */,
 				1825F33E1AC252EE00416132 /* XMPPCoreDataStorage.m in Sources */,
 				1825F3471AC252EE00416132 /* XMPPResourceMemoryStorageObject.m in Sources */,
+				1879A47D1AC54FB300E03F79 /* WCContactViewController.m in Sources */,
 				1825F3901AC252EE00416132 /* XMPPAttentionModule.m in Sources */,
 				1825F3811AC252EE00416132 /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				1825F3741AC252EE00416132 /* NSDate+XMPPDateTimeProfiles.m in Sources */,
