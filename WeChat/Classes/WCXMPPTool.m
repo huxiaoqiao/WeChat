@@ -25,12 +25,20 @@
     
     XMPPvCardAvatarModule *_avatar;//电子名片的头像模块
     
+    XMPPRoster *_roster;//花名册
+    XMPPRosterCoreDataStorage *_rosterStorage;//花名册数据存储
+    
     XMPPResultBlock _resultBlock;//结果回调Block
 }
 /**
  *  1.初始化XMPPStream
  */
 -(void)setupStream;
+
+/**
+ *  释放资源
+ */
+-(void)teardownStream;
 
 /**
  *  2.连接服务器(传一个jid)
@@ -83,9 +91,36 @@ singleton_implementation(WCXMPPTool)
     [_avatar activate:_xmppStream];
     
     
+    // 3.添加 "花名册" 模块
+    _rosterStorage = [[XMPPRosterCoreDataStorage alloc] init];
+    _roster = [[XMPPRoster alloc] initWithRosterStorage:_rosterStorage];
+    [_roster activate:_xmppStream];
+    
     // 设置代理 -
     //#warnning 所有的代理方法都将在子线程被调用
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
+}
+
+-(void)teardownStream{
+    //移除代理
+    [_xmppStream removeDelegate:self];
+    
+    //取消模块
+    [_avatar deactivate];
+    [_vCard deactivate];
+    [_roster deactivate];
+    
+    //断开连接
+    [_xmppStream disconnect];
+    
+    //清空资源
+    _roster = nil;
+    _rosterStorage = nil;
+    _vCardStorage = nil;
+    _vCard = nil;
+    _avatar = nil;
+    _xmppStream = nil;
+    
 }
 
 -(void)connectToHost{
@@ -268,5 +303,10 @@ singleton_implementation(WCXMPPTool)
     //XMPPStream
 }
 
+
+
+-(void)dealloc{
+    [self teardownStream];
+}
 
 @end

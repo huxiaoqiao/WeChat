@@ -850,13 +850,13 @@
 				1825F25F1AC252EE00416132 /* GoogleSharedStatus */,
 				1825F2621AC252EE00416132 /* ProcessOne */,
 				1825F2651AC252EE00416132 /* Reconnect */,
-				1825F2681AC252EE00416132 /* Roster */,
+				1825F2681AC252EE00416132 /* Roster[好友列表] */,
 				1825F2801AC252EE00416132 /* SystemInputActivityMonitor */,
 				1825F2831AC252EE00416132 /* XEP-0009 */,
 				1825F28A1AC252EE00416132 /* XEP-0012 */,
 				1825F28F1AC252EE00416132 /* XEP-0016 */,
 				1825F2921AC252EE00416132 /* XEP-0045 */,
-				1825F2B61AC252EE00416132 /* XEP-0054 */,
+				1825F2B61AC252EE00416132 /* XEP-0054[电子名片] */,
 				1825F2D21AC252EE00416132 /* XEP-0059 */,
 				1825F2D71AC252EE00416132 /* XEP-0060 */,
 				1825F2DC1AC252EE00416132 /* XEP-0065 */,
@@ -931,7 +931,7 @@
 			path = Reconnect;
 			sourceTree = "<group>";
 		};
-		1825F2681AC252EE00416132 /* Roster */ = {
+		1825F2681AC252EE00416132 /* Roster[好友列表] */ = {
 			isa = PBXGroup;
 			children = (
 				1825F2691AC252EE00416132 /* CoreDataStorage */,
@@ -942,6 +942,7 @@
 				1825F27E1AC252EE00416132 /* XMPPRosterPrivate.h */,
 				1825F27F1AC252EE00416132 /* XMPPUser.h */,
 			);
+			name = "Roster[好友列表]";
 			path = Roster;
 			sourceTree = "<group>";
 		};
@@ -1078,7 +1079,7 @@
 			path = MemoryStorage;
 			sourceTree = "<group>";
 		};
-		1825F2B61AC252EE00416132 /* XEP-0054 */ = {
+		1825F2B61AC252EE00416132 /* XEP-0054[电子名片] */ = {
 			isa = PBXGroup;
 			children = (
 				1825F2B71AC252EE00416132 /* CoreDataStorage */,
@@ -1099,6 +1100,7 @@
 				1825F2D01AC252EE00416132 /* XMPPvCardTempTel.h */,
 				1825F2D11AC252EE00416132 /* XMPPvCardTempTel.m */,
 			);
+			name = "XEP-0054[电子名片]";
 			path = "XEP-0054";
 			sourceTree = "<group>";
 		};
