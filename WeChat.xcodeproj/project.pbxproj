@@ -160,6 +160,7 @@
 		1825F3CA1AC2A60600416132 /* WCXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3C91AC2A60600416132 /* WCXMPPTool.m */; };
 		1825F3CE1AC2ADA000416132 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */; };
 		1879A4751AC508F300E03F79 /* WCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4741AC508F300E03F79 /* WCProfileViewController.m */; };
+		1879A4781AC5355200E03F79 /* WCEditVCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4771AC5355200E03F79 /* WCEditVCardViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -486,6 +487,8 @@
 		1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
 		1879A4731AC508F300E03F79 /* WCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileViewController.h; sourceTree = "<group>"; };
 		1879A4741AC508F300E03F79 /* WCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileViewController.m; sourceTree = "<group>"; };
+		1879A4761AC5355200E03F79 /* WCEditVCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCEditVCardViewController.h; sourceTree = "<group>"; };
+		1879A4771AC5355200E03F79 /* WCEditVCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEditVCardViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1454,6 +1457,8 @@
 				1825F3B11AC29E9100416132 /* WCMeViewController.m */,
 				1879A4731AC508F300E03F79 /* WCProfileViewController.h */,
 				1879A4741AC508F300E03F79 /* WCProfileViewController.m */,
+				1879A4761AC5355200E03F79 /* WCEditVCardViewController.h */,
+				1879A4771AC5355200E03F79 /* WCEditVCardViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1711,6 +1716,7 @@
 				1825F3581AC252EE00416132 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				1825F1F31AC251D300416132 /* DDXMLElement.m in Sources */,
 				1825F3711AC252EE00416132 /* TURNSocket.m in Sources */,
+				1879A4781AC5355200E03F79 /* WCEditVCardViewController.m in Sources */,
 				1825F34A1AC252EE00416132 /* XMPPRoster.m in Sources */,
 				1825F38A1AC252EE00416132 /* XMPPAutoPing.m in Sources */,
 				1825F37B1AC252EE00416132 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cwE-Mm-olb">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
@@ -164,7 +165,7 @@
         <!--个人信息-->
         <scene sceneID="DcW-Iy-Kje">
             <objects>
-                <tableViewController id="R6d-Fy-zCm" customClass="WCProfileViewController" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="R6d-Fy-zCm" customClass="WCProfileViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="WJx-xg-Scu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,7 +199,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="nsP-7X-nEw" detailTextLabel="CdF-SP-Qm0" style="IBUITableViewCellStyleValue1" id="p7S-aQ-DHj">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="nsP-7X-nEw" detailTextLabel="CdF-SP-Qm0" style="IBUITableViewCellStyleValue1" id="p7S-aQ-DHj">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p7S-aQ-DHj" id="xww-jp-dr5">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -218,7 +219,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="mzS-Cb-hgn" detailTextLabel="D4v-ka-uer" style="IBUITableViewCellStyleValue1" id="uyq-Rj-gjz">
+                                    <tableViewCell tag="2" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="mzS-Cb-hgn" detailTextLabel="D4v-ka-uer" style="IBUITableViewCellStyleValue1" id="uyq-Rj-gjz">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uyq-Rj-gjz" id="5Ao-tj-oht">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -242,7 +243,7 @@
                             </tableViewSection>
                             <tableViewSection id="Hcx-Rt-qfn">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="VqM-1p-cd2" detailTextLabel="HTz-7D-dQi" style="IBUITableViewCellStyleValue1" id="dtY-4O-qZq">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="VqM-1p-cd2" detailTextLabel="HTz-7D-dQi" style="IBUITableViewCellStyleValue1" id="dtY-4O-qZq">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dtY-4O-qZq" id="wdz-eV-ezk">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -262,7 +263,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="a2f-cf-e6u" detailTextLabel="uyT-zR-nS2" style="IBUITableViewCellStyleValue1" id="TUw-5t-9KS">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="a2f-cf-e6u" detailTextLabel="uyT-zR-nS2" style="IBUITableViewCellStyleValue1" id="TUw-5t-9KS">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TUw-5t-9KS" id="eWQ-ih-eHm">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -282,7 +283,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="deO-R0-36U" detailTextLabel="lWP-wZ-pxK" style="IBUITableViewCellStyleValue1" id="uHh-K7-0vT">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="deO-R0-36U" detailTextLabel="lWP-wZ-pxK" style="IBUITableViewCellStyleValue1" id="uHh-K7-0vT">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uHh-K7-0vT" id="PJh-kG-68E">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -302,7 +303,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cES-LX-ffq" detailTextLabel="7jY-Hz-fRN" style="IBUITableViewCellStyleValue1" id="nqX-OS-Ou5">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="cES-LX-ffq" detailTextLabel="7jY-Hz-fRN" style="IBUITableViewCellStyleValue1" id="nqX-OS-Ou5">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nqX-OS-Ou5" id="Qc5-91-eoc">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -322,7 +323,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="28C-4o-o6n" detailTextLabel="3Ki-2s-1XJ" style="IBUITableViewCellStyleValue1" id="yR9-Sh-mgm">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="28C-4o-o6n" detailTextLabel="3Ki-2s-1XJ" style="IBUITableViewCellStyleValue1" id="yR9-Sh-mgm">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yR9-Sh-mgm" id="DVq-0W-hwu">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -360,11 +361,69 @@
                         <outlet property="telLabel" destination="7jY-Hz-fRN" id="NBk-GE-zy6"/>
                         <outlet property="titleLabel" destination="lWP-wZ-pxK" id="Blm-v0-ryh"/>
                         <outlet property="wechatNumLabel" destination="D4v-ka-uer" id="sdG-Ns-XyF"/>
+                        <segue destination="iN6-vf-3Mq" kind="show" identifier="toEditVcSegue" id="evJ-ew-PdD"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wse-Qa-73h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1282" y="1721"/>
+        </scene>
+        <!--编辑电子名片-->
+        <scene sceneID="4WF-CU-P5e">
+            <objects>
+                <tableViewController hidesBottomBarWhenPushed="YES" id="iN6-vf-3Mq" userLabel="编辑电子名片" customClass="WCEditVCardViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="EKL-ir-m8u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="mdF-2M-YH4">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="XiN-Tt-MLY">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XiN-Tt-MLY" id="2LY-w2-ZGh">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7z8-OL-0QT">
+                                                    <rect key="frame" x="20" y="0.0" width="566" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7z8-OL-0QT" firstAttribute="leading" secondItem="2LY-w2-ZGh" secondAttribute="leading" constant="20" id="NA7-dn-5cq"/>
+                                                <constraint firstItem="7z8-OL-0QT" firstAttribute="top" secondItem="2LY-w2-ZGh" secondAttribute="top" id="YTa-Lj-oYU"/>
+                                                <constraint firstAttribute="bottom" secondItem="7z8-OL-0QT" secondAttribute="bottom" id="uLW-9M-7bi"/>
+                                                <constraint firstAttribute="trailing" secondItem="7z8-OL-0QT" secondAttribute="trailing" constant="14" id="wnc-pS-pn2"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="iN6-vf-3Mq" id="fHF-jX-btT"/>
+                            <outlet property="delegate" destination="iN6-vf-3Mq" id="RYV-F9-OL7"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="nxW-lX-94v"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Title" id="mkK-6b-71i">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="Lsw-Lw-O45">
+                            <connections>
+                                <action selector="saveBtnClick:" destination="iN6-vf-3Mq" id="LpW-gj-LnM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="textField" destination="7z8-OL-0QT" id="PkI-CE-IVN"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtL-8M-I8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2019" y="1730"/>
         </scene>
         <!--我-->
         <scene sceneID="uX7-Ly-hb5">

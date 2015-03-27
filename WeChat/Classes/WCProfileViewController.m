@@ -8,8 +8,9 @@
 
 #import "WCProfileViewController.h"
 #import "XMPPvCardTemp.h"
+#import "WCEditVCardViewController.h"
 
-@interface WCProfileViewController()
+@interface WCProfileViewController()<WCEditVCardViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;//头像
 @property (weak, nonatomic) IBOutlet UILabel *nicknameLabel;//昵称
 @property (weak, nonatomic) IBOutlet UILabel *wechatNumLabel;//微信号
@@ -67,4 +68,76 @@
     
 }
 
+
+#pragma mark 表格选择
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    //根据cell不同tag进行相应的操作
+    /*
+     *tag = 0,换头像
+     *tag = 1,进行到下一个控制器
+     *tag = 2,不做任何操作
+     */
+    
+    
+    //获取cell
+    UITableViewCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    switch (selectedCell.tag) {
+        case 0:
+            WCLog(@"换头像");
+            break;
+        case 1:
+            WCLog(@"进入下一个控制器");
+            [self performSegueWithIdentifier:@"toEditVcSegue" sender:selectedCell];
+            break;
+        case 2:
+            WCLog(@"不做任何操作");
+            break;
+        default:
+            break;
+    }
+
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    //获取目标控制器
+    id destVc = segue.destinationViewController;
+    
+    //设置编辑电子名片控制器的cell属性
+    if ([destVc isKindOfClass:[WCEditVCardViewController class]]) {
+        WCEditVCardViewController *editVc = destVc;
+        editVc.cell = sender;
+        //设置代理
+        editVc.delegate = self;
+    }
+}
+
+
+
+#pragma mark 编辑电子名片控制器的代理
+-(void)editVCardViewController:(WCEditVCardViewController *)editVc didFinishedSave:(id)sender{
+    WCLog(@"完成保存");
+
+    //获取当前电子名片
+    XMPPvCardTemp *myVCard = [WCXMPPTool sharedWCXMPPTool].vCard.myvCardTemp;
+    
+    //重新设置myVCard里的属性
+    myVCard.nickname = self.nicknameLabel.text;
+    myVCard.orgName = self.orgNameLabel.text;
+    
+    if (self.departmentLabel.text != nil) {
+        myVCard.orgUnits = @[self.departmentLabel.text];
+    }
+    
+    myVCard.title = self.telLabel.text;
+    myVCard.note = self.telLabel.text;
+    myVCard.mailer = self.emailLabel.text;
+    
+    //把数据保存到服务器
+    // 内部实现数据上传是把整个电子名片数据都从新上传了一次，包括图片
+    [[WCXMPPTool sharedWCXMPPTool].vCard updateMyvCardTemp:myVCard];
+    
+}
 @end
