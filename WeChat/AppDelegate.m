@@ -7,12 +7,20 @@
 //
 
 #import "AppDelegate.h"
+#import "DDTTYLogger.h"
+#import "DDLog.h"
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
+    //配置XMPP的日志
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
     
 //    [self setupStream];
 //    [self connectToHost];

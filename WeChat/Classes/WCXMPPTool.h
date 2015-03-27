@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Singleton.h"
+#import "XMPPFramework.h"
 
 typedef enum {
     XMPPResultTypeLoginSucess,//登录成功
@@ -24,6 +25,11 @@ typedef void (^XMPPResultBlock)(XMPPResultType);
 
 @interface WCXMPPTool : NSObject
 singleton_interface(WCXMPPTool)
+
+
+
+@property(strong,nonatomic,readonly)XMPPvCardTempModule *vCard;//电子名片模块
+@property(strong,nonatomic,readonly)XMPPvCardCoreDataStorage *vCardStorage;//电子名片数据存储
 
 /**
  *  标识 连接服务器 到底是 "登录连接"还是 “注册连接”

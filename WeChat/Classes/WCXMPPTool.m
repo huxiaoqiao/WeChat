@@ -7,7 +7,7 @@
 //
 
 #import "WCXMPPTool.h"
-#import "XMPPFramework.h"
+
 
 /* 用户登录流程
  1.初始化XMPPStream
@@ -22,9 +22,6 @@
 @interface WCXMPPTool ()<XMPPStreamDelegate>{
     
     XMPPStream *_xmppStream;//与服务器交互的核心类
-    
-    XMPPvCardTempModule *_vCard;//电子名片模块
-    XMPPvCardCoreDataStorage *_vCardStorage;//电子名片数据存储
     
     XMPPvCardAvatarModule *_avatar;//电子名片的头像模块
     
