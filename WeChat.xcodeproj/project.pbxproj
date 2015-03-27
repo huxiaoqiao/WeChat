@@ -159,6 +159,7 @@
 		1825F3C61AC2A38B00416132 /* UIView+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3C01AC2A38B00416132 /* UIView+WF.m */; };
 		1825F3CA1AC2A60600416132 /* WCXMPPTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3C91AC2A60600416132 /* WCXMPPTool.m */; };
 		1825F3CE1AC2ADA000416132 /* WCRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */; };
+		1879A4751AC508F300E03F79 /* WCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4741AC508F300E03F79 /* WCProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -483,6 +484,8 @@
 		1825F3CB1AC2A65600416132 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		1825F3CC1AC2ADA000416132 /* WCRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCRegisterViewController.h; sourceTree = "<group>"; };
 		1825F3CD1AC2ADA000416132 /* WCRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCRegisterViewController.m; sourceTree = "<group>"; };
+		1879A4731AC508F300E03F79 /* WCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCProfileViewController.h; sourceTree = "<group>"; };
+		1879A4741AC508F300E03F79 /* WCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1449,6 +1452,8 @@
 			children = (
 				1825F3B01AC29E9100416132 /* WCMeViewController.h */,
 				1825F3B11AC29E9100416132 /* WCMeViewController.m */,
+				1879A4731AC508F300E03F79 /* WCProfileViewController.h */,
+				1879A4741AC508F300E03F79 /* WCProfileViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1692,6 +1697,7 @@
 				1825F1DE1AC251A000416132 /* DispatchQueueLogFormatter.m in Sources */,
 				1825F38E1AC252EE00416132 /* NSXMLElement+XEP_0203.m in Sources */,
 				1825F23E1AC252A200416132 /* XMPPDeprecatedDigestAuthentication.m in Sources */,
+				1879A4751AC508F300E03F79 /* WCProfileViewController.m in Sources */,
 				1825F3491AC252EE00416132 /* XMPPUserMemoryStorageObject.m in Sources */,
 				1825F3A71AC28FBD00416132 /* MBProgressHUD+HM.m in Sources */,
 				1825F2511AC252A200416132 /* RFImageToDataTransformer.m in Sources */,
@@ -1948,6 +1954,7 @@
 				1825F1BF1AC2511700416132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1825F1C01AC2511700416132 /* Build configuration list for PBXNativeTarget "WeChatTests" */ = {
 			isa = XCConfigurationList;
@@ -1956,6 +1963,7 @@
 				1825F1C21AC2511700416132 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

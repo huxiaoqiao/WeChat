@@ -315,7 +315,18 @@ NSString *const kXMPPvCardTempElement = @"vCard";
 - (void)clearLabels { }
 
 
-- (NSArray *)telecomsAddresses { return nil; }
+- (NSArray *)telecomsAddresses {
+    /*说明XMPP框架没有解析电话
+    <TEL>
+    <VOICE />
+    <WORK />
+    <NUMBER>020-xxxxxx</NUMBER>
+    </TEL>
+     // ?自己解析
+     */
+    return nil;
+
+}
 - (void)addTelecomsAddress:(XMPPvCardTempTel *)tel { }
 - (void)removeTelecomsAddress:(XMPPvCardTempTel *)tel { }
 - (void)setTelecomsAddresses:(NSArray *)tels { }
