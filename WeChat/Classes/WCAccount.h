@@ -40,4 +40,16 @@
  *  保存最新的登录用户数据到沙盒
  */
 -(void)saveToSandBox;
+
+/**
+ *  服务器的域名
+ */
+@property(nonatomic,copy,readonly)NSString *domain;
+
+/**
+ *  服务器IP
+ */
+@property(nonatomic,copy,readonly)NSString *host;
+
+@property(nonatomic,assign,readonly)int port;
 @end
