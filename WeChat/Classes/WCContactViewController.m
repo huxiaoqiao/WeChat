@@ -40,6 +40,11 @@
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"displayName" ascending:YES];
     request.sortDescriptors = @[sort];
     
+    
+    //过滤
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"subscription != %@",@"none"];
+    request.predicate = pre;
+    
     //3.执行请求
     //3.1创建结果控制器
     // 数据库查询，如果数据很多，会放在子线程查询
