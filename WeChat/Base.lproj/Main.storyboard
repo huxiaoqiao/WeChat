@@ -184,7 +184,10 @@
                                             <constraint firstAttribute="height" constant="30" id="pJh-Hc-SWv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="s5e-KA-7YT" id="kIx-uW-asc"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -198,6 +201,19 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-j2-ocn">
                                 <rect key="frame" x="0.0" y="64" width="600" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="bjE-DR-bgz">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bjE-DR-bgz" id="RiR-vh-QnZ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="s5e-KA-7YT" id="atu-6C-LvI"/>
+                                    <outlet property="delegate" destination="s5e-KA-7YT" id="RTP-hX-kBr"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,6 +228,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="聊天界面" id="U5Q-YH-aVl"/>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="qyM-uQ-hrh" id="H6e-iP-EuL"/>
+                        <outlet property="tableView" destination="Y6A-j2-ocn" id="KfQ-DB-0Yt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wih-lK-AId" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

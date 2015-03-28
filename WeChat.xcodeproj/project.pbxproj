@@ -608,7 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				1825F3961AC2530F00416132 /* XMPPFramework.h */,
-				1825F2571AC252EE00416132 /* Extensions */,
+				1825F2571AC252EE00416132 /* Extensions[扩展协议] */,
 				1825F1FE1AC252A200416132 /* Authentication */,
 				1825F2151AC252A200416132 /* Categories */,
 				1825F21C1AC252A200416132 /* Core */,
@@ -852,7 +852,7 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		1825F2571AC252EE00416132 /* Extensions */ = {
+		1825F2571AC252EE00416132 /* Extensions[扩展协议] */ = {
 			isa = PBXGroup;
 			children = (
 				1825F2581AC252EE00416132 /* BandwidthMonitor */,
@@ -892,6 +892,7 @@
 				1825F3371AC252EE00416132 /* XEP-0333 */,
 				1825F33A1AC252EE00416132 /* XEP-0335 */,
 			);
+			name = "Extensions[扩展协议]";
 			path = Extensions;
 			sourceTree = "<group>";
 		};
