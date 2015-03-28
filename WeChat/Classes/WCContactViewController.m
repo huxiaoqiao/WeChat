@@ -121,6 +121,15 @@
             break;
     }
     
+    //显示好友的头像
+    if (user.photo) {//默认的情况，不是程序一启动就有头像
+        cell.imageView.image = user.photo;
+    }else{
+        //从服务器获取头像
+        NSData *imgData = [[WCXMPPTool sharedWCXMPPTool].avatar photoDataForJID:user.jid];
+        cell.imageView.image = [UIImage imageWithData:imgData];
+    }
+    
     return cell;
     
 }
@@ -129,4 +138,18 @@
 //    WCLog(@"====");
 //    [self.tableView reloadData];
 //}
+#pragma mark 实现此方法，就会出现Delete按钮
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    XMPPUserCoreDataStorageObject *user = _resultsContr.fetchedObjects[indexPath.row];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //删除好友
+        [[WCXMPPTool sharedWCXMPPTool].roster removeUser:user.jid];
+    }
+    
+    //刷新表格？
+
+}
+
 @end

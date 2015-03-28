@@ -20,12 +20,6 @@
  4.发送一个 "在线消息" 给服务器 ->可以通知其它用户你上线
  */
 @interface WCXMPPTool ()<XMPPStreamDelegate>{
-    
-    XMPPStream *_xmppStream;//与服务器交互的核心类
-    
-    XMPPvCardAvatarModule *_avatar;//电子名片的头像模块
-    
-    
     XMPPResultBlock _resultBlock;//结果回调Block
 }
 /**

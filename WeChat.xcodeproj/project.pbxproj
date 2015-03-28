@@ -162,6 +162,7 @@
 		1879A4751AC508F300E03F79 /* WCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4741AC508F300E03F79 /* WCProfileViewController.m */; };
 		1879A4781AC5355200E03F79 /* WCEditVCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A4771AC5355200E03F79 /* WCEditVCardViewController.m */; };
 		1879A47D1AC54FB300E03F79 /* WCContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1879A47C1AC54FB300E03F79 /* WCContactViewController.m */; };
+		188172E71AC63C3D00A414C4 /* WCAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188172E61AC63C3D00A414C4 /* WCAddContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -492,6 +493,8 @@
 		1879A4771AC5355200E03F79 /* WCEditVCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCEditVCardViewController.m; sourceTree = "<group>"; };
 		1879A47B1AC54FB300E03F79 /* WCContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCContactViewController.h; sourceTree = "<group>"; };
 		1879A47C1AC54FB300E03F79 /* WCContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCContactViewController.m; sourceTree = "<group>"; };
+		188172E51AC63C3D00A414C4 /* WCAddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAddContactViewController.h; sourceTree = "<group>"; };
+		188172E61AC63C3D00A414C4 /* WCAddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAddContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1512,6 +1515,8 @@
 			children = (
 				1879A47B1AC54FB300E03F79 /* WCContactViewController.h */,
 				1879A47C1AC54FB300E03F79 /* WCContactViewController.m */,
+				188172E51AC63C3D00A414C4 /* WCAddContactViewController.h */,
+				188172E61AC63C3D00A414C4 /* WCAddContactViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1661,6 +1666,7 @@
 				1825F3C51AC2A38B00416132 /* UITextField+WF.m in Sources */,
 				1825F3521AC252EE00416132 /* XMPPRoom.xcdatamodeld in Sources */,
 				1825F3551AC252EE00416132 /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,
+				188172E71AC63C3D00A414C4 /* WCAddContactViewController.m in Sources */,
 				1825F3611AC252EE00416132 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				1825F24C1AC252A200416132 /* XMPPParser.m in Sources */,
 				1825F3A91AC28FBD00416132 /* MBProgressHUD.m in Sources */,

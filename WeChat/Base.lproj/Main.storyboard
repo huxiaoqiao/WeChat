@@ -88,11 +88,77 @@
                             <outlet property="delegate" destination="Q9j-gb-Hwx" id="fVj-Kq-n0b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="通讯录" id="iA4-W4-NXO"/>
+                    <navigationItem key="navigationItem" title="通讯录" id="iA4-W4-NXO">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Cwj-ki-3MO">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="1yi-EW-nwI">
+                                <rect key="frame" x="451" y="7" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="51a-8v-11v" kind="show" id="sus-dY-I3w"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ieD-hw-m5x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="591" y="285"/>
+        </scene>
+        <!--添加好友-->
+        <scene sceneID="4gY-Sq-Uwz">
+            <objects>
+                <tableViewController id="51a-8v-11v" customClass="WCAddContactViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="xmg-JZ-noi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="4Dj-p7-IPd">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="rA6-Rj-YZp">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rA6-Rj-YZp" id="cpq-Ho-J0W">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEE-Qt-y6p">
+                                                    <rect key="frame" x="17" y="8" width="562" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GEE-Qt-y6p" firstAttribute="top" secondItem="cpq-Ho-J0W" secondAttribute="top" id="A40-nC-f6X"/>
+                                                <constraint firstItem="GEE-Qt-y6p" firstAttribute="leading" secondItem="cpq-Ho-J0W" secondAttribute="leading" constant="17" id="kS6-R2-8nA"/>
+                                                <constraint firstAttribute="trailing" secondItem="GEE-Qt-y6p" secondAttribute="trailing" constant="21" id="okB-LZ-QSs"/>
+                                                <constraint firstAttribute="bottom" secondItem="GEE-Qt-y6p" secondAttribute="bottom" id="pPx-AP-pos"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="51a-8v-11v" id="57r-Cf-iY3"/>
+                            <outlet property="delegate" destination="51a-8v-11v" id="SOr-OH-u0x"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="添加好友" id="hzb-5C-fcN">
+                        <barButtonItem key="rightBarButtonItem" title="添加" id="ZgG-7Q-X02">
+                            <connections>
+                                <action selector="addContactBtnClick:" destination="51a-8v-11v" id="EQu-GZ-e4l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textField" destination="GEE-Qt-y6p" id="BdB-pY-TnT"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQf-mF-AOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1245" y="278"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="gLa-LX-HQ7">
