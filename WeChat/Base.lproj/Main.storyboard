@@ -189,13 +189,25 @@
                                             <outlet property="delegate" destination="s5e-KA-7YT" id="kIx-uW-asc"/>
                                         </connections>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HL8-eH-89g">
+                                        <rect key="frame" x="507" y="4" width="35" height="35"/>
+                                        <state key="normal" image="TypeSelectorBtn_Black">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="imgChooseBtnClick:" destination="s5e-KA-7YT" eventType="touchUpInside" id="72t-Yi-FCQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="rn7-uJ-OPa" firstAttribute="leading" secondItem="BuS-Db-Bsw" secondAttribute="leading" constant="46" id="3uK-kF-uPU"/>
+                                    <constraint firstAttribute="bottom" secondItem="HL8-eH-89g" secondAttribute="bottom" constant="5" id="Mq4-Az-WBi"/>
                                     <constraint firstItem="rn7-uJ-OPa" firstAttribute="top" secondItem="BuS-Db-Bsw" secondAttribute="top" constant="8" id="PuH-Ga-CUJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="HL8-eH-89g" secondAttribute="trailing" constant="58" id="SMg-uY-cZf"/>
                                     <constraint firstAttribute="trailing" secondItem="rn7-uJ-OPa" secondAttribute="trailing" constant="96" id="WO8-5S-1dZ"/>
                                     <constraint firstAttribute="height" constant="44" id="dxl-4D-m49"/>
+                                    <constraint firstItem="HL8-eH-89g" firstAttribute="top" secondItem="BuS-Db-Bsw" secondAttribute="top" constant="4" id="yob-Hi-FMa"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Y6A-j2-ocn">
@@ -586,7 +598,7 @@
         <scene sceneID="uX7-Ly-hb5">
             <objects>
                 <navigationController id="gV5-Bw-qxE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我" id="5nA-1V-Xz8"/>
+                    <tabBarItem key="tabBarItem" title="我" image="tabbar_meHL" id="5nA-1V-Xz8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vy2-iz-Yo4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -599,11 +611,11 @@
             </objects>
             <point key="canvasLocation" x="-177" y="1723"/>
         </scene>
-        <!--Item-->
+        <!--发现-->
         <scene sceneID="SuT-qq-HLW">
             <objects>
                 <navigationController id="kvS-qt-R9O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ixb-N7-zdr"/>
+                    <tabBarItem key="tabBarItem" title="发现" image="tabbar_discoverHL" id="ixb-N7-zdr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VqB-1t-yft">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -620,7 +632,7 @@
         <scene sceneID="8GZ-vW-wgQ">
             <objects>
                 <navigationController id="uMw-3z-Kxo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="通讯录" id="ioU-Sl-Oyl"/>
+                    <tabBarItem key="tabBarItem" title="通讯录" image="tabbar_discoverHL" id="ioU-Sl-Oyl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQb-JL-9Wl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -633,11 +645,11 @@
             </objects>
             <point key="canvasLocation" x="-293" y="225"/>
         </scene>
-        <!--Item-->
+        <!--微信 -->
         <scene sceneID="W5m-DK-z0t">
             <objects>
                 <navigationController id="NC7-WB-0HM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="V5d-gO-PxP"/>
+                    <tabBarItem key="tabBarItem" title="微信 " image="tabbar_mainframeHL" id="V5d-gO-PxP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RDQ-TU-v00">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -651,4 +663,10 @@
             <point key="canvasLocation" x="-611" y="-611"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TypeSelectorBtn_Black" width="35" height="35"/>
+        <image name="tabbar_discoverHL" width="23" height="23"/>
+        <image name="tabbar_mainframeHL" width="25" height="23"/>
+        <image name="tabbar_meHL" width="23" height="23"/>
+    </resources>
 </document>
