@@ -7,6 +7,7 @@
 //
 
 #import "WCContactViewController.h"
+#import "WCChatViewController.h"
 
 @interface WCContactViewController()<NSFetchedResultsControllerDelegate>{
     NSFetchedResultsController *_resultsContr;
@@ -157,4 +158,22 @@
 
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    XMPPJID *friendJid = [_resultsContr.fetchedObjects[indexPath.row] jid];
+    //进入聊天控制器
+    [self performSegueWithIdentifier:@"toChatVcSegue" sender:friendJid];
+    
+}
+
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    id destVc = segue.destinationViewController;
+    if ([destVc isKindOfClass:[WCChatViewController class]]) {
+        WCChatViewController *chatVc = destVc;
+        chatVc.friendJid = sender;
+    }
+}
 @end

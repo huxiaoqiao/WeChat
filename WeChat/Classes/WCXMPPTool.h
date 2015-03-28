@@ -36,6 +36,12 @@ singleton_interface(WCXMPPTool)
 @property(strong,nonatomic,readonly)XMPPRoster *roster;//花名册
 @property(strong,nonatomic,readonly)XMPPRosterCoreDataStorage *rosterStorage;//花名册数据存储
 
+
+
+@property(strong,nonatomic,readonly)XMPPMessageArchiving *msgArchiving;
+@property(strong,nonatomic,readonly)XMPPMessageArchivingCoreDataStorage *msgArchivingStorage;
+
+
 /**
  *  标识 连接服务器 到底是 "登录连接"还是 “注册连接”
  *  NO 代表登录操作
