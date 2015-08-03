@@ -46,7 +46,8 @@
 // 
 //#import "XMPPCoreDataStorage.h"
 //
-//#import "XMPPReconnect.h"
+//自动连接
+#import "XMPPReconnect.h"
 //
 //#import "XMPPRoster.h"
 //#import "XMPPRosterMemoryStorage.h"

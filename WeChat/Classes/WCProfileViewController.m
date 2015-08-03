@@ -63,7 +63,12 @@
     
     //邮箱
     // 使用mailer充当
-    self.emailLabel.text = myvCard.mailer;
+    //self.emailLabel.text = myvCard.mailer;
+    NSArray *emails = myvCard.emailAddresses;
+    if (emails.count > 0) {
+        self.emailLabel.text = emails[0];;
+    }
+
 
     
 }
@@ -185,7 +190,15 @@
     
     myVCard.title = self.telLabel.text;
     myVCard.note = self.telLabel.text;
-    myVCard.mailer = self.emailLabel.text;
+    
+    
+    //解析邮箱
+    //myVCard.mailer = self.emailLabel.text;
+    if (self.emailLabel.text.length > 0) {
+        // 只保存一个邮箱
+        myVCard.emailAddresses = @[self.emailLabel.text];
+    }
+
     
     //把数据保存到服务器
     // 内部实现数据上传是把整个电子名片数据都从新上传了一次，包括图片

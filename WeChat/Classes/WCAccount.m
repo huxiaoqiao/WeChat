@@ -11,7 +11,7 @@
 #define kPwdKey @"pwd"
 #define kLoginKey @"login"
 
-static NSString *domain = @"teacher.local";
+static NSString *domain = @"huxiaoqiao.local";
 static NSString *host = @"127.0.0.1";
 static int port = 5222;
 

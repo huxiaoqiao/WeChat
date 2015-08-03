@@ -20,6 +20,8 @@
  4.发送一个 "在线消息" 给服务器 ->可以通知其它用户你上线
  */
 @interface WCXMPPTool ()<XMPPStreamDelegate>{
+    XMPPReconnect *_reconnect;//自动连接模块,由于网络问题，与服务器断开时，它会自己连接服务器
+    
     XMPPResultBlock _resultBlock;//结果回调Block
 }
 /**
@@ -94,6 +96,10 @@ singleton_implementation(WCXMPPTool)
     _msgArchiving = [[XMPPMessageArchiving alloc] initWithMessageArchivingStorage:_msgArchivingStorage];
     [_msgArchiving activate:_xmppStream];
     
+    // 5.添加 “自动连接” 模块
+    _reconnect = [[XMPPReconnect alloc] init];
+    [_reconnect activate:_xmppStream];
+    
     // 设置代理 -
     //#warnning 所有的代理方法都将在子线程被调用
     [_xmppStream addDelegate:self delegateQueue:dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)];
@@ -108,11 +114,14 @@ singleton_implementation(WCXMPPTool)
     [_vCard deactivate];
     [_roster deactivate];
     [_msgArchiving deactivate];
+    [_reconnect deactivate];
+    
     
     //断开连接
     [_xmppStream disconnect];
     
     //清空资源
+    _reconnect = nil;
     _msgArchiving = nil;
     _msgArchivingStorage = nil;
     _roster = nil;
